@@ -1,0 +1,27 @@
+body{
+    background: #101010;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.dot{
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+    filter: blur(3px);
+    position: absolute;
+    /* background: #ffffff; */
+    animation-name: fade;
+    animation-duration: 1900ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    100%{
+        opacity: 0;
+        translate: 125px 125px
+    }
+}

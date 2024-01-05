@@ -34,3 +34,32 @@ function showText(a, b){
 }
 
 showText.delay(1000)(1,2)
+
+
+// ------------------------------------------------------------
+
+function slow(x){
+  for(let i = 0; i <= x; i++){
+    if(i == x){console.log("Done counting")}
+  }
+  return x
+}
+
+function cachingDecorator(func){
+  let cache = new Map()
+
+  return function(x){
+    if(cache.has(x)){
+      return cache.get(x)
+    }
+    let result = func.call(this, x)
+    cache.set(x, result)
+    return result
+  }
+}
+
+slow = cachingDecorator(slow)
+
+console.log(slow(3000000000))
+console.log("Calling again")
+console.log(slow(3000000000))

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "No Shorts Allowed!",
   "description": "Stop degradating! No shorts anymore!",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
     "16": "/icons/ico16.png",
     "48": "/icons/ico48.png",
